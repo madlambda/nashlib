@@ -1,0 +1,5 @@
+# set common colors
+
+NASH_RED   = "\033[31m"
+NASH_GREEN = "\033[32m"
+NASH_RESET = "\033[0m"

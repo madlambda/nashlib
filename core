@@ -1,0 +1,11 @@
+# core functions
+
+fn len(list) {
+        i = "0"
+
+        for l in $list {
+                i <= expr $i "+" "1" | xargs echo -n
+        }
+
+        return $i
+}

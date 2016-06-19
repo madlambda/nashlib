@@ -22,6 +22,17 @@ fn TestLen() {
         } else {
                 echo "SUCCESS"
         }
+
+        IFS = ("\n")
+        list <= seq 0 1000
+
+        length <= len($list)
+
+        if $length != "1001" {
+                echo "Invalid length " + $length
+        } else {
+                echo "SUCCESS"
+        }
 }
 
 TestLen()

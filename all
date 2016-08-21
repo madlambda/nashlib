@@ -1,4 +1,5 @@
 # Import all modules
 
+import "core"
 import "colors"
 import "get"

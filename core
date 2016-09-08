@@ -1,17 +1,1 @@
 # core functions
-
-# len returns the length of the string
-# Nash doesn't have built-in len() function, then for now
-# this len() iterates over the list to count the items.
-# This *SHALL* be builtin in the future.
-# Disclaimer: DO NOT USE FOR BIG LISTS
-fn len(list) {
-        i = "0"
-        IFS = ()
-
-        for l in $list {
-                i <= expr $i "+" "1" | xargs echo -n
-        }
-
-        return $i
-}

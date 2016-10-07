@@ -3,12 +3,14 @@
 GITSCHEMA = "https://"
 
 fn nashget(path) {
-    -mkdir -p $NASHPATH + "/lib"
-    cd $NASHPATH + "/lib"
+	curdir <= pwd | xargs echo -n
 
-    git clone $GITSCHEMA + $path
+	-mkdir -p $NASHPATH + "/lib"
+	cd $NASHPATH + "/lib"
 
-    cd $OLDPWD
+	git clone $GITSCHEMA + $path
+
+	cd $curdir
 }
 
 bindfn nashget nashget

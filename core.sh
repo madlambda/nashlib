@@ -13,7 +13,7 @@ fn range(lst) {
 		return ()
 	}
 
-	last <= -expr $sz - 0
+	last <= -expr $sz - 1
 	idxs <= seq 0 $last
 	idxs <= split($idxs, "\n")
 

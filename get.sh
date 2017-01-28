@@ -13,5 +13,3 @@ fn nashget(path) {
 
 	chdir($curdir)
 }
-
-bindfn nashget nashget

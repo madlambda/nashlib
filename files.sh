@@ -11,3 +11,22 @@ fn is_dir(f) {
 
 	return $status
 }
+
+fn getfiles(path) {
+	files <= ls $path
+	flist <= split($files, "\n")
+
+	return $flist
+}
+
+fn filesgrep(path, pat) {
+	files = ()
+
+	for f in getfiles($path) {
+		if grep($f, $pat) == "0" {
+			files <= append($files, $f)
+		}
+	}
+
+	return $files
+}

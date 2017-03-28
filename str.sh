@@ -1,5 +1,6 @@
-# Join concatenates the elements of `lst` into a new string values
-# separated by `sep`. `Lst` must contains only string values.
+# Join concatenates the elements of `lst` into a new string
+# with values separated by `sep`. `Lst` must contains only
+# string values.
 # This function is the bastard brother of builtin `split`.
 fn join(lst, sep) {
 	sz      <= len($lst)

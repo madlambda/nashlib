@@ -20,8 +20,8 @@ fn testjoin(expected, lst, sep) {
 fn TestJoin() {
 	tests = (
 		(
-			"scratching my itchs"
-			(scratching my itchs)
+			"scratching my itches"
+			(scratching my itches)
 			" "
 		)
 		(

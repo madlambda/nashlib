@@ -34,6 +34,11 @@ fn TestJoin() {
 			(writing tests in shellscript we are making history)
 			" "
 		)
+		(
+			"we are gangsters"
+			(we gangsters)
+			" are "
+		)
 	)
 
 	for test in $tests {

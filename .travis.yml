@@ -14,7 +14,7 @@ install:
   - go get -v github.com/NeowayLabs/nash/cmd/nash
 
 script:
-  - nash -c "make test"
+  - make test
 
 notifications:
   webhooks:

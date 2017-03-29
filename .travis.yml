@@ -12,6 +12,7 @@ go:
   - tip
 install:
   - go get -v github.com/NeowayLabs/nash/cmd/nash
+  - cd $GOPATH/src/github.com/NeowayLabs/nash/cmd/nash && git checkout multiple-returns && make install
 
 script:
   - nash -c "make test"

@@ -1,26 +1,26 @@
 # common file operations
 
 fn file_exists(f) {
-	-test -e $f
+	var _, status <= test -e $f
 
 	return $status
 }
 
 fn is_dir(f) {
-	-test -d $f
+	var _, status <= test -d $f
 
 	return $status
 }
 
 fn getfiles(path) {
-	files <= ls $path
-	flist <= split($files, "\n")
+	var files <= ls $path
+	var flist <= split($files, "\n")
 
 	return $flist
 }
 
 fn filesgrep(path, pat) {
-	files = ()
+	var files = ()
 
 	for f in getfiles($path) {
 		if grep($f, $pat) == "0" {

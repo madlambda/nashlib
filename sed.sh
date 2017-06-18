@@ -1,13 +1,13 @@
 # sed helpers
 
 fn sed(in, pat) {
-	out <= echo -n $in | sed $pat
+	var out <= echo -n $in | sed $pat
 
 	return $out
 }
 
 fn lstsed(lst, pat) {
-	out = ()
+	var out = ()
 
 	for l in $lst {
 		out <= append($out, sed($l, $pat))

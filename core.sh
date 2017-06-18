@@ -1,20 +1,20 @@
 # core functions
 
 fn pwd() {
-	curdir <= pwd | tr -d "\n"
+	var curdir <= pwd
 
 	return $curdir
 }
 
 fn range(lst) {
-	sz <= len($lst)
+	var sz <= len($lst)
 
 	if $sz == "0" {
 		return ()
 	}
 
-	last <= -expr $sz - 1
-	idxs <= seq 0 $last
+	var last, _ <= expr $sz - 1
+	var idxs <= seq 0 $last
 	idxs <= split($idxs, "\n")
 
 	return $idxs

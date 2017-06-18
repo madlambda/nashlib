@@ -1,11 +1,11 @@
 #!/usr/bin/env
 
-GITSCHEMA = "https://"
+var GITSCHEMA = "https://"
 
 fn nashget(path) {
-	curdir <= pwd | xargs echo -n
+	var curdir <= pwd | xargs echo -n
 
-	-mkdir -p $NASHPATH+"/lib"
+	_ <= mkdir -p $NASHPATH+"/lib"
 
 	chdir($NASHPATH+"/lib")
 

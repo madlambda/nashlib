@@ -5,7 +5,7 @@
 import ./str
 
 fn testjoin(expected, lst, sep) {
-	got <= join($lst, $sep)
+	var got <= join($lst, $sep)
 
 	if $got != $expected {
 		printf "Failed to join: '%s' != '%s'" $got $expected
@@ -18,7 +18,7 @@ fn testjoin(expected, lst, sep) {
 
 # testJoin returns 0 in case of tests pass and 1 otherwise
 fn TestJoin() {
-	tests = (
+	var tests = (
 		(
 			"scratching my itches"
 			(scratching my itches)
@@ -42,7 +42,7 @@ fn TestJoin() {
 	)
 
 	for test in $tests {
-		st <= testjoin($test[0], $test[1], $test[2])
+		var st <= testjoin($test[0], $test[1], $test[2])
 
 		if $st != "0" {
 			return $st

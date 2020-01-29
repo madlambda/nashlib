@@ -1,6 +1,6 @@
 #!/usr/bin/env nash
 
-testfiles <= ls | grep ".*_test\\.sh$" | grep -v "^all_test.sh$"
+var testfiles <= ls | grep ".*_test\\.sh$" | grep -v "^all_test.sh$"
 testfiles <= split($testfiles, "\n")
 
 # run all test files

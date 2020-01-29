@@ -2,16 +2,16 @@ os:
   - linux
   - osx
 
-env:
-  NASHPATH: "/tmp/nash"
-
 language: go
 sudo: false
 
 go:
   - tip
 install:
-  - go get -v github.com/NeowayLabs/nash/cmd/nash
+  - go get -v github.com/madlambda/nash/cmd/nash
+
+before_script:
+  - mkdir -p $HOME/nashroot $HOME/nash
 
 script:
   - make test
@@ -24,6 +24,7 @@ notifications:
     on_failure: always
     on_start: never
   email:
-    - tiago.natel@neoway.com.br
-    - tiago.katcipis@neoway.com.br
-    - vitor.arins@neoway.com.br
+    - tiago4orion@gmail.com
+    - tiagokatcipis@gmail.com
+    - vitorarins@gmail.com
+    - lucianoborguetti@gmail.com

@@ -3,12 +3,12 @@
 # values.
 # This function is the bastard brother of builtin `split`.
 fn join(lst, sep) {
-	sz      <= len($lst)
-	last, _ <= expr $sz "-" "1"
-	indices <= seq 0 $last
+	var sz      <= len($lst)
+	var last, _ <= expr $sz "-" "1"
+	var indices <= seq 0 $last
 	indices <= split($indices, "\n")
 
-	str     = ""
+	var str     = ""
 
 	for i in $indices {
 		if $i != $last {

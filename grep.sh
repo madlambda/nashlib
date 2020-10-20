@@ -1,5 +1,8 @@
 fn grep(content, pat) {
-	_, status <= echo $content | -grep $pat >[1=]
+	var _, status <= echo $content | -grep $pat >[1=]
 
-	return $status
+	if $status == "0" {
+		return $status
+	}
+
 }
